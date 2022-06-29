@@ -109,6 +109,17 @@ $(document).on("keydown", function (event) {
   return (startedGame = false);
 });
 
+// function tap on mobile
+$(document).on("tap", function (event) {
+  if (startedGame === true) {
+    $("#level-title").html("level " + level);
+    nextSequence();
+  }
+
+  return (startedGame = false);
+});
+
+
 // At this point, it might be worth reviewing how the Simon game works.
 
 // Firstly, the game shows the first colour in the sequence (blue). The user clicks on the blue button.
