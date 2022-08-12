@@ -96,6 +96,16 @@ function animatePress(currentColour) {
 
 let startedGame = true;
 
+$(document).on("click", function (event) {
+  console.log(event);
+  if (startedGame === true) {
+    $("#level-title").html("Level " + level);
+    nextSequence();
+  }
+
+  return (startedGame = false);
+});
+
 $(document).on("keydown", function (event) {
   let a = event.key;
   if (a === "a" || a === "A") {
